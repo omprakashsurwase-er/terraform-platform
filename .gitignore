@@ -1,0 +1,29 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# Terraform plan files
+*.tfplan
+
+# CLI config
+.terraformrc
+terraform.rc
+
+# macOS
+.DS_Store
+
+# SSH Keys
+*.pem
+*.key
+
+# IDE
+.vscode/
+# Terraform lock file
+**/.terraform.lock.hcl
+.idea/

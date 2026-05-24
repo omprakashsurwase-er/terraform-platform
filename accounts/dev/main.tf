@@ -1,6 +1,3 @@
-
-
-
 module "dev2-ec2" {
 
   source = "../../modules/ec2"
@@ -18,4 +15,24 @@ module "dev2-ec2" {
   ]
 
   key_name = "devops"
+}
+
+
+module "iam" {
+  source = "../../modules/iam"
+
+  role_name  = "terraformrole"
+  environment = "dev"
+  service    = "ec2.amazonaws.com"
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
+}
+
+
+module "iam_lambda" {
+  source = "../../modules/iam"
+
+  role_name  = "terraformrole-lambda"
+  environment = "dev"
+  service    = "lambda.amazonaws.com"
+  policy_arn = "arn:aws:iam::aws:policy/AWSLambda_FullAccess"
 }

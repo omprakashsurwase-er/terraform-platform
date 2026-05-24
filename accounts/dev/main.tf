@@ -1,9 +1,9 @@
 
 
 
- module "dev2-ec2" {
+module "dev2-ec2" {
 
-   source = "../../modules/ec2"
+  source = "../../modules/ec2"
 
   name        = "dev2-ec2"
   environment = "dev"
@@ -18,4 +18,4 @@
   ]
 
   key_name = "devops"
-}                      
+}
